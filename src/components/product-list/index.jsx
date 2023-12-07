@@ -5,7 +5,7 @@ import ProductList from "./ProductList";
 const Product = () => {
   const [productList, setProductList] = useState([]);
   const handleAddProduct = (product) => {
-    console.log("product", product);
+    console.log('product', product)
     setProductList((pre) => [...pre, product]);
   };
 

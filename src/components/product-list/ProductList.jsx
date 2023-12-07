@@ -5,7 +5,7 @@ const ProductList = (props) => {
   const { productList } = props;
 
   return (
-    <table>
+    <table border={1} style={{ width: "100%", borderCollapse: "collapse" }}>
       <thead>
         <tr>
           <th>No</th>
@@ -15,7 +15,9 @@ const ProductList = (props) => {
         </tr>
       </thead>
       <tbody>
-        
+        {productList.map((product, index) => (
+          <ProductListItem key={product.id} product={product} index={index} />
+        ))}
       </tbody>
     </table>
   );
