@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-const ProductForm = () => {
+const timestamp = () => {
+  return Date.now();
+};
+
+const ProductForm = (props) => {
+  const { onAddProduct } = props;
   const [product, setProduct] = useState({
     title: "",
     source: "",
@@ -8,7 +13,7 @@ const ProductForm = () => {
   const [isDisabled, setIsDisabled] = useState(true);
 
   const handleSubmit = () => {
-    console.log("product", product);
+    onAddProduct({ ...product, id: timestamp() });
     setProduct({
       title: "",
       source: "",

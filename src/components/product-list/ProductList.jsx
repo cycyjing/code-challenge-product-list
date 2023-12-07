@@ -1,6 +1,9 @@
-import React from 'react'
+import React from "react";
+import ProductListItem from "./ProductListItem";
 
-const ProductList = () => {
+const ProductList = (props) => {
+  const { productList } = props;
+
   return (
     <table>
       <thead>
@@ -11,8 +14,11 @@ const ProductList = () => {
           <th>Action</th>
         </tr>
       </thead>
+      <tbody>
+        
+      </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;
