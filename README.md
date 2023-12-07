@@ -1,5 +1,12 @@
 # Product List
 
+## Description
+This React project showcases a simple yet dynamic user interface where users can submit a form, and the submitted content is immediately displayed in a list below the form.
+
+## Features
+- **Form Submission:** Users can input data into a form.
+- **Dynamic List Update:** Upon submission, the form data is displayed in a list below the form.
+
 ## Usage
 To set up and run the application locally, follow these steps:
 1. Clone this repository to your local machine.
