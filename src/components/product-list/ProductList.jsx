@@ -2,7 +2,7 @@ import React from "react";
 import ProductListItem from "./ProductListItem";
 
 const ProductList = (props) => {
-  const { productList } = props;
+  const { productList, onDeleteProduct } = props;
 
   return (
     <table border={1} style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -16,7 +16,12 @@ const ProductList = (props) => {
       </thead>
       <tbody>
         {productList.map((product, index) => (
-          <ProductListItem key={product.id} product={product} index={index} />
+          <ProductListItem
+            key={product.id}
+            product={product}
+            index={index}
+            onDeleteProduct={onDeleteProduct}
+          />
         ))}
       </tbody>
     </table>
